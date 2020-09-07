@@ -1,0 +1,88 @@
+@import "colors";
+@import "fonts";
+
+.field {
+  width: 50vw;
+  text-align: right;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+
+.inputForm {
+  text-align: left;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+.inputTable {
+  height: 30vh;
+  width: 12vw;
+}
+
+.xInput {
+  input {
+    @extend %inputFont;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $secondaryColor;
+    margin-left: 1%;
+    outline: none;
+  }
+
+  label {
+    @extend %spanFont;
+  }
+}
+
+.rInputLabel, .yInputLabel {
+  padding-top: 5%;
+
+  @extend %spanFont
+}
+
+.rInput, .yInput {
+  padding-top: 2%;
+
+  td {
+    width: 50px;
+    padding-left: 4%;
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      @extend %inputFont;
+
+      background: $secondaryColor;
+      color: $inverseColor;
+      box-shadow: 0 0 5px $primaryColor;
+    }
+  }
+
+  label {
+    @extend %inputFont;
+
+    background: $primaryColor;
+    color: $secondaryColor;
+
+    display: block;
+    width: 100%;
+    border: 1px solid $secondaryColor;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    transition: 0.5s;
+  }
+
+  label:hover {
+    @extend %inputFont;
+
+    background: $secondaryColor;
+    color: $inverseColor;
+    box-shadow: 0 0 5px $primaryColor;
+  }
+}
+

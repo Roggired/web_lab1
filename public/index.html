@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alex lab</title>
+</head>
+<body>
+    <!--Плак-плак-->
+    <table>
+        <tr class="header">
+            <td class="author" colspan="2">
+                Aleksei Egoshin,
+                <br/>
+                P3213, Variant 2405
+            </td>
+        </tr>
+        <tr class="fieldLine">
+            <td class="field">
+                <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- first figure triangle -->
+                    <polygon fill="orange"
+                             fill-opacity="0.5"
+                             points="150,250 150,150 250,150"
+                             stroke="orange"></polygon>
+
+                    <!-- second figure rectangle-->
+                    <polygon fill="yellow"
+                             fill-opacity="0.5"
+                             points="50,150 50,50 150,50 150,150"
+                             stroke="yellow"></polygon>
+
+                    <!-- third figure circle-->
+                    <path d="M 50 150
+                             A 100 100, 0, 0, 0, 150 250
+                             L 150 150 Z"
+                          fill="green"
+                          fill-opacity="0.5"
+                          stroke="green"></path>
+
+                    <!-- Оси со стрелками   -->
+                    <line stroke="white" x1="0" x2="300" y1="150" y2="150"></line>
+                    <line stroke="white" x1="150" x2="150" y1="0" y2="300"></line>
+                    <polygon fill="white" points="150,0 144,15 156,15" stroke="white"></polygon>
+                    <polygon fill="white" points="300,150 285,156 285,144" stroke="white"></polygon>
+
+                    <!-- Засечки    -->
+                    <line stroke="white" x1="200" x2="200" y1="155" y2="145"></line>
+                    <line stroke="white" x1="250" x2="250" y1="155" y2="145"/>
+
+                    <line stroke="white" x1="50" x2="50" y1="155" y2="145"/>
+                    <line stroke="white" x1="100" x2="100" y1="155" y2="145"/>
+
+                    <line stroke="white" x1="145" x2="155" y1="100" y2="100"/>
+                    <line stroke="white" x1="145" x2="155" y1="50" y2="50"/>
+
+                    <line stroke="white" x1="145" x2="155" y1="200" y2="200"/>
+                    <line stroke="white" x1="145" x2="155" y1="250" y2="250"/>
+
+                    <!-- Подписи к засечкам    -->
+                    <text fill="white" x="195" y="140">R/2</text>
+                    <text fill="white" x="248" y="140">R</text>
+
+                    <text fill="white" x="40" y="140">-R</text>
+                    <text fill="white" x="90" y="140">-R/2</text>
+
+                    <text fill="white" x="160" y="105">R/2</text>
+                    <text fill="white" x="160" y="55">R</text>
+
+                    <text fill="white" x="160" y="205">-R/2</text>
+                    <text fill="white" x="160" y="255">-R</text>
+
+                    <text fill="white" x="160" y="10">Y</text>
+                    <text fill="white" x="290" y="140">X</text>
+
+                    <circle cx="150" cy="150" id="target-dot" r="0" stroke="white" fill="white"></circle>
+                </svg>
+            </td>
+            <td class="inputForm">
+                <form>
+                    <table class="inputTable">
+                        <tr>
+                            <td class="xInput" colspan="5">
+                                <label id="x-label" for="x">X:</label>
+                                <input id="x" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rInputLabel" colspan="5">
+                                <span>R:</span>
+                            </td>
+                        </tr>
+                        <tr class="rInput">
+                            <td>
+                                <input id="radio-1" type="radio" name="r-group" value="1">
+                                <label for="radio-1">1</label>
+                            </td>
+                            <td>
+                                <input id="radio-2" type="radio" name="r-group" value="1.5">
+                                <label for="radio-2">1,5</label>
+                            </td>
+                            <td>
+                                <input id="radio-3" type="radio" name="r-group" value="2">
+                                <label for="radio-3">2</label>
+                            </td>
+                            <td>
+                                <input id="radio-4" type="radio" name="r-group" value="2.5">
+                                <label for="radio-4">2,5</label>
+                            </td>
+                            <td>
+                                <input id="radio-5" type="radio" name="r-group" value="3">
+                                <label for="radio-5">3</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="yInputLabel" colspan="5">
+                                <span>Y:</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="yInput" colspan="5">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input id="checkbox-1" type="checkbox" name="y-group" value="-3">
+                                            <label for="checkbox-1">-3</label>
+                                        </td>
+                                        <td>
+                                            <input id="checkbox-2" type="checkbox" name="y-group" value="-2">
+                                            <label for="checkbox-2">-2</label>
+                                        </td>
+                                        <td>
+                                            <input id="checkbox-3" type="checkbox" name="y-group" value="-1">
+                                            <label for="checkbox-3">-1</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input id="checkbox-4" type="checkbox" name="y-group" value="0">
+                                            <label for="checkbox-4">0</label>
+                                        </td>
+                                        <td>
+                                            <input id="checkbox-5" type="checkbox" name="y-group" value="1">
+                                            <label for="checkbox-5">1</label>
+                                        </td>
+                                        <td>
+                                            <input id="checkbox-6" type="checkbox" name="y-group" value="2">
+                                            <label for="checkbox-6">2</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input id="checkbox-7" type="checkbox" name="y-group" value="3">
+                                            <label for="checkbox-7">3</label>
+                                        </td>
+                                        <td>
+                                            <input id="checkbox-8" type="checkbox" name="y-group" value="4">
+                                            <label for="checkbox-8">4</label>
+                                        </td>
+                                        <td>
+                                            <input id="checkbox-9" type="checkbox" name="y-group" value="5">
+                                            <label for="checkbox-9">5</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table id="errors">
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table class="buttonsContainer">
+                    <tr>
+                        <td>
+                            <button id="submitButton">
+                                SUBMIT
+                            </button>
+                        </td>
+                        <td>
+                            <button id="resetButton">
+                                RESET
+                            </button>
+                        </td>
+                        <td>
+                            <button id="cleanButton">
+                                CLEAN RESULT
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="resultTableContainer" colspan="2">
+                <table class="resultTable">
+                    <tr class="resultTableHeaderLine">
+                        <td class="resultTableColumnHeader">
+                            X
+                        </td>
+                        <td class="resultTableColumnHeader">
+                            Y
+                        </td>
+                        <td class="resultTableColumnHeader">
+                            R
+                        </td>
+                        <td class="resultTableColumnHeader">
+                            CURRENT TIME
+                        </td>
+                        <td class="resultTableColumnHeader">
+                            EXECUTION TIME
+                        </td>
+                        <td class="resultTableColumnHeader">
+                            HIT RESULT
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr class="footer">
+            <td class="author" colspan="2">
+                For You &#10084;
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

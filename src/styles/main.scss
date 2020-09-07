@@ -1,0 +1,101 @@
+@import "~normalize.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+
+@import "colors";
+@import "fonts";
+
+@import "resultTable";
+@import "fieldLine";
+
+table {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  min-height: 10vh;
+  height: 5%;
+  width: 100%;
+
+  background-color: $primaryColor;
+
+  box-shadow: 0 0 200px $secondaryColor;
+  animation: headerShine 7s infinite;
+}
+
+@keyframes headerShine {
+  0%   { box-shadow: 0 0 200px $secondaryColor
+  }
+  50%  { box-shadow: 0 0 100px $primaryColor
+  }
+  100% { box-shadow: 0 0 200px $secondaryColor
+  }
+}
+
+.author {
+  @extend %headerFont;
+
+  padding-left: 1%;
+}
+
+.author:first-letter {
+  color: $inverseColor;
+}
+
+body {
+  background-image: linear-gradient(to top, $secondaryColor 5%, $primaryColor 100%);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.buttonsContainer {
+  padding-top: 5vh;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+button {
+  @extend %spanFont;
+
+  background: $primaryColor;
+  color: $secondaryColor;
+  height: 35px;
+  width: 10vw;
+  min-width: 170px;
+
+  border: 1px solid $secondaryColor;
+  transition: 0.5s;
+
+  outline: none;
+
+  &:hover {
+    box-shadow: 0 0 5px $primaryColor;
+    background: $secondaryColor;
+    color: $inverseColor;
+  }
+}
+
+#errors {
+  padding-top: 5vh;
+  padding-left: 40%;
+  padding-right: 40%;
+
+  td {
+    @extend %inputFont;
+
+    color: red;
+  }
+}
+
+.footer td {
+  text-align: center;
+  height: 5vh;
+  width: 100vw;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  background-color: $primaryColor;
+}

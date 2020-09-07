@@ -1,0 +1,22 @@
+@import "colors";
+
+%spanFont {
+  font-family: 'Long Cang', cursive;
+  font-size: 20pt;
+  font-weight: bold;
+  color: $secondaryColor;
+}
+
+%inputFont {
+  font-family: 'Long Cang', cursive;
+  font-size: 18pt;
+  color: $secondaryColor;
+}
+
+%headerFont {
+  font-family: 'Long Cang', cursive;
+  font-size: 25pt;
+  font-style: italic;
+  font-weight: bold;
+  color: $secondaryColor;
+}
